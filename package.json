@@ -1,0 +1,23 @@
+{
+  "name": "vue-devtool-flash-updates",
+  "version": "0.0.1",
+  "description": "A handy devtool that enables highlighting re-rendered components!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuichkun/vue-devtool-flash-updates.git"
+  },
+  "keywords": [
+    "vue",
+    "devtool"
+  ],
+  "author": "Yuichi Yogo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuichkun/vue-devtool-flash-updates/issues"
+  },
+  "homepage": "https://github.com/yuichkun/vue-devtool-flash-updates#readme"
+}
