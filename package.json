@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/yuichkun/vue-devtool-flash-updates/issues"
   },
-  "homepage": "https://github.com/yuichkun/vue-devtool-flash-updates#readme"
+  "homepage": "https://github.com/yuichkun/vue-devtool-flash-updates#readme",
+  "devDependencies": {
+    "@types/chrome": "0.0.154"
+  }
 }
