@@ -41,4 +41,4 @@ Vue.mixin({
       this.$el.classList.add('flash')
     }
   },
-})i
+})
