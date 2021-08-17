@@ -15,7 +15,8 @@ window.addEventListener('DOMContentLoaded', () => {
 function onChange(e) {
   console.log('onChange', e)
   setFeatureAvailability(e.target.checked)
-  spinLogo()
+  const reverse = e.target.checked
+  spinLogo(reverse)
 }
 input.addEventListener('change', onChange)
 
@@ -46,10 +47,14 @@ function setFeatureAvailability(enabled) {
   })
 }
 
-function spinLogo() {
-  if(logoImage.classList.contains('spin')) {
-    logoImage.classList.remove('spin')
+function spinLogo(reverse=false) {
+  function removeClassName(className) {
+    if(logoImage.classList.contains(className)) {
+      logoImage.classList.remove(className)
+    }
   }
+  ['spin-reversed', 'spin'].forEach(removeClassName)
+  const newClassName = reverse ? 'spin-reversed' : 'spin'
   void logoImage.offsetWidth
-  logoImage.classList.add('spin')
+  logoImage.classList.add(newClassName)
 }
