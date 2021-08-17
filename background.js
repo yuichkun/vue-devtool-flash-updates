@@ -1,17 +1,15 @@
-// let color = '#3aa757';
+console.log('background is here')
 
-// chrome.runtime.onInstalled.addListener(() => {
-//   chrome.storage.sync.set({ color });
-//   console.log(this)
-//   console.log('Default background color set to %cgreen', `color: ${color}`);
-// });
+chrome.runtime.onConnect.addListener((devToolsConnection) => {
+    console.log('connection!', devToolsConnection);
 
-
-chrome.devtools.panels.create(
-  "Yogo Panel",
-  "icon.png",
-  "panel.html",
-  function (panel) {
-    console.log('success', panel);
-  }
-)
+    const devToolsListener = (message, sender, sendResponse) => {
+      // Inject a content script into the identified tab
+      // chrome.scripting.executeScript(message.tabId,
+      //   { file: message.scripToInject });
+    }
+    devToolsConnection.onMessage.addListener(devToolsListener);
+    devToolsConnection.onDisconnect.addListener(() => {
+        devToolsConnection.onMessage.removeListener(devToolsListener);
+    });
+});
