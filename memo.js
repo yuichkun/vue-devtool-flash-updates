@@ -31,8 +31,16 @@ const style = document.createElement('style')
 style.innerHTML = animationCss
 document.head.appendChild(style)
 
+function checkAvailability() {
+  const FEATURE_AVAILABILITY_KEY = 'VUE_DEVTOOLS_FLASH_UPDATES_ENABLED'
+  const featureAvailabilityValueStr = localStorage.getItem(FEATURE_AVAILABILITY_KEY)
+  const enabled = featureAvailabilityValueStr === 'true'
+  return enabled
+}
+
 Vue.mixin({
   updated: function() {
+    if(!checkAvailability()) return
     if (this.$el.classList) {
       if (this.$el.classList.contains('flash')) {
         this.$el.classList.remove('flash')
