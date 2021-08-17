@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="checkbox.css">
     <style>
       * {
         margin: 0;
@@ -17,23 +18,20 @@
         font-family: 'Roboto', sans-serif;
       }
       #container {
-        margin-top: 32px;
         display: flex;
+        height: 100%;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
       }
       #container > img {
-        margin-bottom: 32px;
+        margin-bottom: 64px;
       }
       label {
         font-weight: bold;
         cursor: pointer;
         user-select: none;
         font-size: 32px;
-        color: #D8C909
-      }
-      label:hover {
-        filter: brightness(2.0);
       }
 
       .spin {
@@ -58,8 +56,11 @@
     <div id="container">
       <img id="flash-on-update-logo" width="200" src="vue-flash-updates.svg" alt="vue-flash-updates-logo">
       <label>
-        Flash Components on Updates:
-        <input id="flash-on-update-checkbox" type="checkbox">
+        <input class="cb cb1" id="flash-on-update-checkbox" type="checkbox"/>
+        <i></i>
+        <span>
+          Flash Components on Updates:
+        </span> 
       </label>
     </div>
     <script src="panel.js"></script>
