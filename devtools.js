@@ -9,13 +9,17 @@
 
 chrome.devtools.panels.create(
   "Vue Flash Updates",
-  "icon.png",
+  "vue-flash-updates.png",
   "panel.html",
   function (panel) {
     console.log('success', panel);
   }
 )
-chrome.devtools.inspectedWindow.eval(`alert()`, (result, exception) => {
+
+const script = `
+`
+
+chrome.devtools.inspectedWindow.eval(script, (result, exception) => {
   console.log('exceptions', exception)
   console.log('result', result);
 })
