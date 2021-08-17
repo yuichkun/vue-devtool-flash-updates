@@ -1,5 +1,6 @@
 console.log('hello from panel.js')
 const input = document.getElementById('flash-on-update-checkbox')
+const logoImage = document.getElementById('flash-on-update-logo')
 const FEATURE_AVAILABILITY_KEY = 'VUE_DEVTOOLS_FLASH_UPDATES_ENABLED'
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
 function onChange(e) {
   console.log('onChange', e)
   setFeatureAvailability(e.target.checked)
+  spinLogo()
 }
 input.addEventListener('change', onChange)
 
@@ -42,4 +44,12 @@ function setFeatureAvailability(enabled) {
     }
     console.log('result', result)
   })
+}
+
+function spinLogo() {
+  if(logoImage.classList.contains('spin')) {
+    logoImage.classList.remove('spin')
+  }
+  void logoImage.offsetWidth
+  logoImage.classList.add('spin')
 }
