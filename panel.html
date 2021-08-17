@@ -3,20 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Vue Flash Updates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
       html, body {
+        background: #233127;
         height: 100%;
+        font-family: 'Roboto', sans-serif;
       }
       #container {
-        display: flex;
-        height: 100%;
+      }
+      label {
+        font-size: 32px;
+        color: #D8C909
       }
     </style>
   </head>
   <body>
     <div id="container">
-      <h1>Vue Flash Updates</h1>
-      <div id="app"></div>
+      <img width="200" src="vue-flash-updates.svg" alt="vue-flash-updates-logo">
+      <label>
+        Flash Components on Updates:
+        <input type="checkbox">
+      </label>
     </div>
   </body>
 </html>
