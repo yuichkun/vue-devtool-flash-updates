@@ -1,4 +1,3 @@
-
 const animationCss = `
 .flash::before {
   animation: 1s flash linear forwards;
@@ -26,10 +25,12 @@ const animationCss = `
 
 
 
+function initialize() {
+  const style = document.createElement('style')
+  style.innerHTML = animationCss
+  document.head.appendChild(style)
+}
 
-const style = document.createElement('style')
-style.innerHTML = animationCss
-document.head.appendChild(style)
 
 function checkAvailability() {
   const FEATURE_AVAILABILITY_KEY = 'VUE_DEVTOOLS_FLASH_UPDATES_ENABLED'
@@ -38,15 +39,22 @@ function checkAvailability() {
   return enabled
 }
 
-Vue.mixin({
-  updated: function() {
-    if(!checkAvailability()) return
-    if (this.$el.classList) {
-      if (this.$el.classList.contains('flash')) {
-        this.$el.classList.remove('flash')
-      }
-      void this.$el.offsetWidth;
-      this.$el.classList.add('flash')
-    }
-  },
-})
+
+export default {
+  install(Vue, options) {
+    console.log('installing flash updates')
+    initialize()
+    Vue.mixin({
+      updated: function() {
+        if(!checkAvailability()) return
+        if (this.$el.classList) {
+          if (this.$el.classList.contains('flash')) {
+            this.$el.classList.remove('flash')
+          }
+          void this.$el.offsetWidth
+          this.$el.classList.add('flash')
+        }
+      },
+    })
+  }
+}
