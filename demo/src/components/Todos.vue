@@ -10,7 +10,7 @@
         My Todos:
         <ul>
           <li v-for="(todo, i) in todos" :key=i>
-            <todo-item :todo="todo" />
+            <todo-item :todo="todo" :removeTodo="removeTodo" />
           </li>
         </ul>
       </div>
@@ -37,8 +37,11 @@
       },
       addTodo(){
         const todo = this.inputTodo
-        this.todos = [...this.todos, todo]
+        this.todos.push(todo)
         this.inputTodo = ''
+      },
+      removeTodo(todo){
+        this.todos.splice(this.todos.indexOf(todo), 1)
       }
     }
   }
