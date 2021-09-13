@@ -4,6 +4,10 @@ const FLASH_CLASS_NAME = 'vue-devtools-flash-updates-flash';
 const FEATURE_AVAILABILITY_KEY = 'VUE_DEVTOOLS_FLASH_UPDATES_ENABLED'
 
 const animationCss = `
+/* this might cause an issue depending on situations. needs to be implemented with better solutions.*/
+.${FLASH_CLASS_NAME} {
+  position: relative;
+}
 .${FLASH_CLASS_NAME}::before {
   animation: 1s ${FLASH_CLASS_NAME} linear forwards;
   box-sizing: border-box;
