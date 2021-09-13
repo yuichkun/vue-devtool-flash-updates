@@ -1,6 +1,11 @@
+// This needs to be a thoughtful class name to avoid collision with users' class names
+const FLASH_CLASS_NAME = 'vue-devtools-flash-updates-flash';
+// This value is set in the local storage by the extension
+const FEATURE_AVAILABILITY_KEY = 'VUE_DEVTOOLS_FLASH_UPDATES_ENABLED'
+
 const animationCss = `
-.flash::before {
-  animation: 1s flash linear forwards;
+.${FLASH_CLASS_NAME}::before {
+  animation: 1s ${FLASH_CLASS_NAME} linear forwards;
   box-sizing: border-box;
 
   content: '';
@@ -13,7 +18,7 @@ const animationCss = `
   height: 100%;
 }
 
-@keyframes flash {
+@keyframes ${FLASH_CLASS_NAME} {
   0% {
     border: 3px solid rgb(55, 175, 169, 1);
   }
@@ -24,35 +29,31 @@ const animationCss = `
 `
 
 
-
 function initialize() {
   const style = document.createElement('style')
   style.innerHTML = animationCss
   document.head.appendChild(style)
 }
 
-
 function checkAvailability() {
-  const FEATURE_AVAILABILITY_KEY = 'VUE_DEVTOOLS_FLASH_UPDATES_ENABLED'
   const featureAvailabilityValueStr = localStorage.getItem(FEATURE_AVAILABILITY_KEY)
   const enabled = featureAvailabilityValueStr === 'true'
   return enabled
 }
 
-
 export default {
   install(Vue, options) {
-    console.log('installing flash updates')
+    console.log('installing flash updates', animationCss)
     initialize()
     Vue.mixin({
       updated: function() {
         if(!checkAvailability()) return
         if (this.$el.classList) {
-          if (this.$el.classList.contains('flash')) {
-            this.$el.classList.remove('flash')
+          if (this.$el.classList.contains(FLASH_CLASS_NAME)) {
+            this.$el.classList.remove(FLASH_CLASS_NAME)
           }
           void this.$el.offsetWidth
-          this.$el.classList.add('flash')
+          this.$el.classList.add(FLASH_CLASS_NAME)
         }
       },
     })
