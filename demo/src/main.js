@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import FlashUpdates from '../../src/vue-devtools-flash-updates'
+import FlashUpdates from 'vue-devtools-flash-updates'
 
 Vue.config.productionTip = false
 
