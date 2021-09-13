@@ -32,9 +32,6 @@
   }
 </script>
 
-<!-- CSS libraries -->
-<style src="normalize.css/normalize.css"></style>
-
 <!-- Global CSS -->
 <style>
   code {

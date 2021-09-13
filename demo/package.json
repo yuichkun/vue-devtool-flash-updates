@@ -1,28 +1,43 @@
 {
+  "name": "vue-devtool-flash-updates-demo",
+  "version": "0.1.0",
   "private": true,
-  "name": "flash-highlight-demo",
-  "productName": "flash-highlight-demo",
-  "description": "A demo project for vue-devtool-flash-updates",
-  "version": "0.0.1",
-  "license": "MIT",
   "scripts": {
-    "dev": "poi",
-    "build": "poi build",
-    "report": "poi build --bundle-report",
-    "serve": "serve dist --single"
-  },
-  "author": {
-    "name": "yuichkun",
-    "email": "yuichkun@gmail.com"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "normalize.css": "7.0.0",
-    "object-assign": "4.1.1",
-    "promise-polyfill": "6.0.2"
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
+    "vue-devtool-flash-updates": "file:.."
   },
   "devDependencies": {
-    "poi": "9.0.0",
-    "poi-preset-bundle-report": "2.0.0",
-    "serve": "6.1.0"
-  }
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
