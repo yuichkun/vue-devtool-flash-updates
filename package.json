@@ -1,6 +1,6 @@
 {
   "name": "vue-devtool-flash-updates",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A handy devtool that enables highlighting re-rendered components!",
   "main": "src/vue-devtools-flash-updates.js",
   "scripts": {
