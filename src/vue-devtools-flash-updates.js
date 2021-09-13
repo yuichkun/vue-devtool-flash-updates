@@ -43,7 +43,6 @@ function checkAvailability() {
 
 export default {
   install(Vue, options) {
-    console.log('installing flash updates', animationCss)
     initialize()
     Vue.mixin({
       updated: function() {
