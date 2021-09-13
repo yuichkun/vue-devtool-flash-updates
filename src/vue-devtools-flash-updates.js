@@ -45,12 +45,38 @@ function checkAvailability() {
   return enabled
 }
 
+const DEFAULT_OPTIONS = Object.freeze({
+  logUpdatedComponents: false
+})
+
+function buildOptions(_options) {
+  const options = { ...DEFAULT_OPTIONS }
+  if (_options != null) {
+    const { logUpdatedComponents } = _options
+    if (logUpdatedComponents) {
+      if (typeof logUpdatedComponents !== 'boolean') {
+        throw new Error('logUpdatedComponents must be a boolean value')
+      }
+      options.logUpdatedComponents = logUpdatedComponents
+    }
+  }
+  return options
+}
+
+function log(content) {
+  console.debug(`vue-devtool-flash-updates: detected updates on %c ${content}`, 'color: #D8C909');
+}
+
 export default {
-  install(Vue, options) {
+  install(Vue, _options) {
+    const options = buildOptions(_options)
     initialize()
     Vue.mixin({
       updated: function() {
         if(!checkAvailability()) return
+        if (options.logUpdatedComponents) {
+          log(this.$options.name)
+        }
         if (this.$el.classList) {
           if (this.$el.classList.contains(FLASH_CLASS_NAME)) {
             this.$el.classList.remove(FLASH_CLASS_NAME)
