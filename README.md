@@ -1,7 +1,7 @@
 # vue-devtool-flash-updates
 
 <p align="center">
-  <img width="256" height="221" src="./misc/vue-flash-updates.png">
+  <img src="./misc/vue-flash-updates.png">
 </p>
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
@@ -13,14 +13,29 @@ This plugin enables Vue projects to quickly identify performance issues by highl
 
 ## Table of Contents
 
-- [Background](#background)
+- [Live Demo🔥](#live-demo🔥)
 - [Install](#install)
 - [Usage](#usage)
 - [Maintainers](#maintainers)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Background
+## Live Demo🔥
+
+*Wanna quickly see it in action?*  
+
+Here's a tedious demo todo app with the plugin enabled:
+
+<p align="center">
+  <img src="./misc/live-demo-screenshot.gif">
+</p>
+
+<!-- TODO: chrome store link here -->
+1. Download the Chrome extension here.
+1. Visit the demo site [here](https://vue-devtool-flash-updates-demo-yuichkun.vercel.app/).
+1. From the devtool panel, select the `Vue Flash Updates` tab and enable the power! ⚡️⚡️
+
+You will see the updated components' names logged in the console as well!
 
 ## Install
 
