@@ -1,7 +1,7 @@
 <template>
   <div>
     <span>{{ todo }}</span>
-    <button @click="removeTodo(todo)">DELETE</button>
+    <button id="delete-button" @click="removeTodo(todo)">Delete</button>
   </div>
 </template>
 <script>
@@ -13,3 +13,9 @@ export default Vue.extend({
 })
 
 </script>
+
+<style scoped>
+#delete-button {
+  margin-left: 32px;
+}
+</style>
