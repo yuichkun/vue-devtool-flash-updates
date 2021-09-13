@@ -46,18 +46,25 @@ function checkAvailability() {
 }
 
 const DEFAULT_OPTIONS = Object.freeze({
-  logUpdatedComponents: false
+  logUpdatedComponents: false,
+  isProduction: false
 })
 
 function buildOptions(_options) {
   const options = { ...DEFAULT_OPTIONS }
   if (_options != null) {
-    const { logUpdatedComponents } = _options
+    const { logUpdatedComponents, isProduction } = _options
     if (logUpdatedComponents) {
       if (typeof logUpdatedComponents !== 'boolean') {
         throw new Error('logUpdatedComponents must be a boolean value')
       }
       options.logUpdatedComponents = logUpdatedComponents
+    }
+    if (isProduction) {
+      if (typeof isProduction !== 'boolean') {
+        throw new Error('isProduction must be a boolean value')
+      }
+      options.isProduction = isProduction
     }
   }
   return options
@@ -70,21 +77,23 @@ function log(content) {
 export default {
   install(Vue, _options) {
     const options = buildOptions(_options)
-    initialize()
-    Vue.mixin({
-      updated: function() {
-        if(!checkAvailability()) return
-        if (options.logUpdatedComponents) {
-          log(this.$options.name)
-        }
-        if (this.$el.classList) {
-          if (this.$el.classList.contains(FLASH_CLASS_NAME)) {
-            this.$el.classList.remove(FLASH_CLASS_NAME)
+    if (!options.isProduction) {
+      initialize()
+      Vue.mixin({
+        updated: function() {
+          if(!checkAvailability()) return
+          if (options.logUpdatedComponents) {
+            log(this.$options.name)
           }
-          void this.$el.offsetWidth
-          this.$el.classList.add(FLASH_CLASS_NAME)
-        }
-      },
-    })
+          if (this.$el.classList) {
+            if (this.$el.classList.contains(FLASH_CLASS_NAME)) {
+              this.$el.classList.remove(FLASH_CLASS_NAME)
+            }
+            void this.$el.offsetWidth
+            this.$el.classList.add(FLASH_CLASS_NAME)
+          }
+        },
+      })
+    }
   }
 }
