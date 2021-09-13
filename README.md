@@ -1,6 +1,8 @@
 # vue-devtool-flash-updates
 
-![banner](./vue-flash-updates.png)
+<p align="center">
+  <img width="256" height="221" src="./vue-flash-updates.png">
+</p>
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 [![standard-readme compliant](https://img.shields.io/npm/dw/vue-devtool-flash-updates?style=flat-square)](https://img.shields.io/npm/dw/vue-devtool-flash-updates?style=flat-square)
