@@ -10,7 +10,7 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "vue-devtool-flash-updates": "file:.."
+    "vue-devtool-flash-updates": "0.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
