@@ -3,14 +3,14 @@
     <h1>Demo Todo App</h1>
     <div class="bottom">
       <div>
-        <input type="text" ref="todo-input">
+        <input type="text" @input="updateInputTodo" :value="inputTodo" >
         <button @click="addTodo">Add</button>
       </div>
       <div>
         My Todos:
         <ul>
-          <li v-for="(todo, i) in todos" :key="i">
-            <span>{{ todo }}</span>
+          <li v-for="(todo, i) in todos" :key=i>
+            <todo-item :todo="todo" />
           </li>
         </ul>
       </div>
@@ -19,17 +19,26 @@
 </template>
 
 <script>
+  import TodoItem from './TodoItem.vue'
   export default {
     name: 'Todo',
+    components: {
+      TodoItem
+    },
     data(){
       return {
+        inputTodo: '',
         todos: []
       }
     },
     methods: {
+      updateInputTodo(e){
+        this.inputTodo = e.target.value
+      },
       addTodo(){
-        const todo = this.$refs['todo-input'].value
+        const todo = this.inputTodo
         this.todos = [...this.todos, todo]
+        this.inputTodo = ''
       }
     }
   }
