@@ -22,5 +22,6 @@
   "homepage": "https://github.com/yuichkun/vue-devtool-flash-updates#readme",
   "devDependencies": {
     "@types/chrome": "0.0.154"
-  }
+  },
+  "files": ["./src"]
 }
