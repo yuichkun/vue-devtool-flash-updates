@@ -19,6 +19,7 @@ This plugin enables Vue projects to quickly identify performance issues by highl
 - [Live Demo🔥](#live-demo🔥)
 - [Install](#install)
 - [Usage](#usage)
+- [Available Options](#available-options)
 - [Maintainers](#maintainers)
 - [Contributing](#contributing)
 - [License](#license)
@@ -67,6 +68,23 @@ Vue.use(FlashUpdates)
 ![screen shot of devtool](./misc/screenshot-dev-window.gif)
 
 **It's that easy! 🔥**
+
+## Available Options
+
+Name | Type | Default | Description
+--- | --- | --- | ---
+`logUpdatedComponents` | Boolean | `false` | When `true`, log the updated components' names in the console with *debug* level.
+`isProduction` | Boolean | `false` | When `true`, disable the plugin.
+
+**Tips⚡️**:  
+ In order to prevent random users from using the plugin on production sites, you're encouraged to pass a boolean value to the `isProduction` option. Recommended way of doing so is by passing `process.env.NODE_ENV === 'production'` to the plugin, and let module bundlers like webpack to transform the environment variable.
+
+```javascript
+import FlashPlugin from 'vue-devtool-flash-updates'
+Vue.use(FlashPlugin, {
+  isProduction: process.env.NODE_ENV === 'production' // The plugin is disabled on production, enabled on other environments
+})
+```
 
 ## Maintainers
 
