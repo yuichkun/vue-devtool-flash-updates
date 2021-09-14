@@ -10,6 +10,13 @@
 [![release](https://img.shields.io/github/v/release/yuichkun/vue-devtool-flash-updates?style=flat-square)](https://img.shields.io/github/v/release/yuichkun/vue-devtool-flash-updates?style=flat-square)
 [![chrome web store](https://img.shields.io/chrome-web-store/users/fhoioahocakkbcghinblimnenhdnhmnj?style=flat-square)](https://chrome.google.com/webstore/detail/vue-devtool-flash-updates/fhoioahocakkbcghinblimnenhdnhmnj)
 
+---
+🇬🇧 English Version 👈   
+🇨🇳 [中文版](./translations/README.ch.md)  
+🇯🇵 日本語版(WIP)
+
+---
+
 > A handy devtool that enables highlighting re-rendered components!
 
 This plugin enables Vue projects to quickly identify performance issues by highlighting re-rendered components, just like how [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) does it.

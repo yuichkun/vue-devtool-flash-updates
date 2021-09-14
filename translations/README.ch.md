@@ -10,6 +10,14 @@
 [![release](https://img.shields.io/github/v/release/yuichkun/vue-devtool-flash-updates?style=flat-square)](https://img.shields.io/github/v/release/yuichkun/vue-devtool-flash-updates?style=flat-square)
 [![chrome web store](https://img.shields.io/chrome-web-store/users/fhoioahocakkbcghinblimnenhdnhmnj?style=flat-square)](https://chrome.google.com/webstore/detail/vue-devtool-flash-updates/fhoioahocakkbcghinblimnenhdnhmnj)
 
+---
+
+🇬🇧 [English Version](../README.md)  
+🇨🇳 中文版 👈  
+🇯🇵 日本語版(WIP)
+
+---
+
 > 一个方便的工具，可以突出显示重新渲染的组件！
 
 这个插件使Vue项目能够通过突出显示重新渲染的组件来快速发现性能问题，就像[React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)所做的那样。
