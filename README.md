@@ -5,7 +5,11 @@
 </p>
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-[![standard-readme compliant](https://img.shields.io/npm/dw/vue-devtool-flash-updates?style=flat-square)](https://img.shields.io/npm/dw/vue-devtool-flash-updates?style=flat-square)
+[![package size](https://img.shields.io/bundlephobia/min/vue-devtool-flash-updates?style=flat-square)](https://img.shields.io/bundlephobia/min/vue-devtool-flash-updates?style=flat-square)
+[![downloads](https://img.shields.io/npm/dw/vue-devtool-flash-updates?style=flat-square)](https://img.shields.io/npm/dw/vue-devtool-flash-updates?style=flat-square)
+<!-- TODO: add chrome store version badge -->
+
+[![release](https://img.shields.io/github/v/release/yuichkun/vue-devtool-flash-updates?style=flat-square)](https://img.shields.io/github/v/release/yuichkun/vue-devtool-flash-updates?style=flat-square)
 
 > A handy devtool that enables highlighting re-rendered components!
 
