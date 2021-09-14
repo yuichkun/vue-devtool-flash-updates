@@ -31,7 +31,7 @@ Here's a tedious demo todo app with the plugin enabled:
 </p>
 
 <!-- TODO: chrome store link here -->
-1. Download the Chrome extension here.
+1. Download the Chrome extension. **⚠️As of Now, It's pending review on the store, but will shortly be available. Hold on to it!⚠️**
 1. Visit the demo site [here](https://vue-devtool-flash-updates-demo-yuichkun.vercel.app/).
 1. From the devtool panel, select the `Vue Flash Updates` tab and enable the power! ⚡️⚡️
 
