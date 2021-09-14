@@ -14,7 +14,7 @@
 
 🇬🇧 [English Version](../README.md)  
 🇨🇳 中文版 👈  
-🇯🇵 日本語版(WIP)
+🇯🇵 [日本語版](./README.ja.md)
 
 ---
 

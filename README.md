@@ -13,7 +13,7 @@
 ---
 🇬🇧 English Version 👈   
 🇨🇳 [中文版](./translations/README.ch.md)  
-🇯🇵 日本語版(WIP)
+🇯🇵 [日本語版](./translations/README.ja.md)
 
 ---
 
