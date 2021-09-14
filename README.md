@@ -88,6 +88,8 @@ Vue.use(FlashPlugin, {
 
 ## Maintainers
 
+Should you find any bugs or have any suggestions, please submit an issue [here](https://github.com/yuichkun/vue-devtool-flash-updates/issues/new?assignees=&labels=&template=bug_report.md&title=)
+
 [@yuichkun](https://github.com/yuichkun)
 
 ## Contributing
