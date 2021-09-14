@@ -69,6 +69,17 @@ Vue.use(FlashUpdates)
 
 **It's that easy! 🔥**
 
+<br />
+
+---
+
+By the way,  
+If you like the plugin, star-ing this repo on [GitHub](https://github.com/yuichkun/vue-devtool-flash-updates) really **DOES** boost my motivation to keep improving it 💪
+
+---
+
+<br />
+
 ## Available Options
 
 Name | Type | Default | Description
@@ -96,7 +107,7 @@ Should you find any bugs or have any suggestions, please submit an issue [here](
 
 See [the contributing file](CONTRIBUTING.md)!
 
-PRs accepted.
+PRs are more than welcome 😎!
 
 Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
