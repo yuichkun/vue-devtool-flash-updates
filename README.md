@@ -8,7 +8,7 @@
 [![package size](https://img.shields.io/bundlephobia/min/vue-devtool-flash-updates?style=flat-square)](https://img.shields.io/bundlephobia/min/vue-devtool-flash-updates?style=flat-square)
 [![downloads](https://img.shields.io/npm/dw/vue-devtool-flash-updates?style=flat-square)](https://img.shields.io/npm/dw/vue-devtool-flash-updates?style=flat-square)
 [![release](https://img.shields.io/github/v/release/yuichkun/vue-devtool-flash-updates?style=flat-square)](https://img.shields.io/github/v/release/yuichkun/vue-devtool-flash-updates?style=flat-square)
-<!-- TODO: add chrome store version badge -->
+[![chrome web store](https://img.shields.io/chrome-web-store/users/fhoioahocakkbcghinblimnenhdnhmnj?style=flat-square)](https://chrome.google.com/webstore/detail/vue-devtool-flash-updates/fhoioahocakkbcghinblimnenhdnhmnj)
 
 > A handy devtool that enables highlighting re-rendered components!
 
@@ -33,8 +33,7 @@ Here's a tedious demo todo app with the plugin enabled:
   <img src="./misc/live-demo-screenshot.gif">
 </p>
 
-<!-- TODO: chrome store link here -->
-1. Download the Chrome extension. **⚠️As of Now, It's pending review on the store, but will shortly be available. Hold on to it!⚠️**
+1. Download the Chrome extension [here](https://chrome.google.com/webstore/detail/vue-devtool-flash-updates/fhoioahocakkbcghinblimnenhdnhmnj).
 1. Visit the demo site [here](https://vue-devtool-flash-updates-demo-yuichkun.vercel.app/).
 1. From the devtool panel, select the `Vue Flash Updates` tab and enable the power! ⚡️⚡️
 
@@ -54,9 +53,8 @@ yarn add -D vue-devtool-flash-updates
 
 ## Usage
 
-<!-- TODO: add link here -->
-1. Download the extension from the Chrome Web Store.
-2. Setup the plugin in your desired project.
+1. [Download the extension from the Chrome Web Store](https://chrome.google.com/webstore/detail/vue-devtool-flash-updates/fhoioahocakkbcghinblimnenhdnhmnj).
+2. Install the package and setup the plugin in your desired project.
 
 ```js
 import FlashUpdates from 'vue-devtool-flash-updates'
